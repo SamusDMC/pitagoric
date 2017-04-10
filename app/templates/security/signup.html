@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <form id="form-signup" action="{{ url_for('signup') }}" method="post">
+      <h1>Join with us and you learn all about of mathematics!</h1>
+      <input type="text" name="username" placeholder="User name"> <br>
+      <input type="text" name="email" placeholder="Email"> <br>
+      <input type="password" name="password" placeholder="Password"> <br>
+      <input type="password" name="repeat_password" placeholder="Repeat password"> <br>
+      <button type="submit">Sign up</button>
+    </form>
+  </div>
+{% endblock %}

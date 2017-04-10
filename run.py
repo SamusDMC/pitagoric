@@ -1,9 +1,10 @@
 # Run cool stuff of mathematics.
+from os import getenv
 
-from app import app
-import os
+from app import create_app
 
-if os.getenv('DEBUG') == 'True':
-    app.run(debug=True)
-else:
-    app.run()
+PORT = getenv('PORT') or '8080'
+DEBUG = getenv('DEBUG')
+HOST = '127.0.0.1'
+app = create_app('../config.py')
+app.run(host=HOST, port=int(PORT), debug=bool(DEBUG))

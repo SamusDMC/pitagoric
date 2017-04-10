@@ -1,0 +1,25 @@
+{
+  "name": "math-blog",
+  "version": "1.0.0",
+  "description": "What is Math Blog? well i will attempt build a site for learn much stuff of mathematics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rich-97/math-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rich-97/math-blog/issues"
+  },
+  "homepage": "https://github.com/rich-97/math-blog#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "webpack-stream": "^3.2.0"
+  }
+}
