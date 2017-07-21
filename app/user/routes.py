@@ -1,4 +1,4 @@
-from flask.ext.via.routers.default import Functional
+from flask_via.routers.default import Functional
 from views import *
 
 routes = [

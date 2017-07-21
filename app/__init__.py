@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask, render_template
-from flask.ext.via import Via
+from flask_via import Via
 from models import db
+from flask_compress import Compress
+
+compress = Compress()
+via = Via()
 
 
 def create_app(config_file):
     app = Flask(__name__)
     app.config.from_pyfile(config_file)
     app.secret_key = 'dEwq43FalLñpq12Nb!'
-    via = Via()
     via.init_app(app)
     db.init_app(app)
+    compress.init_app(app)
 
     with app.app_context():
         db.create_all()

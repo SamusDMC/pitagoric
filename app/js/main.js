@@ -1,25 +1,26 @@
-const CheckPasswords = require('check-passwords');
-const helpers = require('./helpers');
+const CheckPasswords = require('check-passwords')
+const helpers = require('./helpers')
+const Backbone = require('backbone')
+const _ = require('underscore')
+const { $ } = Backbone
 
-window.onload = function () {
-  const route = helpers.normalizePath(location.pathname);
+$(function () {
+  const route = helpers.normalizePath(window.location.pathname)
 
   switch (route) {
     case 'signup': {
       new CheckPasswords({
         onMatch: function () {
-          this.target.onsubmit = null;
+          this.target.onsubmit = null
         },
         onDontMatch: function () {
-          alert('The password aren\'t equals');
-          this.target.onsubmit = e => e.preventDefault();
+          window.alert('The password aren\'t equals')
+          this.target.onsubmit = e => e.preventDefault()
         }
-      }).watch();
+      }).watch()
     }
-      break;
+      break
     default:
-      return false;
+      return false
   }
-
-  console.log(`Hello, PI ${Math.PI}`);
-};
+})

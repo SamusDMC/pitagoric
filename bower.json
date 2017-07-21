@@ -1,0 +1,25 @@
+{
+  "name": "math-blog",
+  "description": "What is Math Blog? well i will attempt build a site for learn much stuff of mathematics.",
+  "main": "run.py",
+  "authors": [
+    "rich <morenoricardo237@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Math"
+  ],
+  "homepage": "https://github.com/rich-97/math-blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/scss/tools/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "mixins.scss": "*"
+  }
+}

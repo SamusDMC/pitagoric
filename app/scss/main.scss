@@ -1,3 +1,10 @@
-@charset 'UTF-8';
+// Settings.
+@import 'settings/variables';
+@import 'settings/colors';
 
-@import 'basic';
+// Tools.
+@import 'tools/vendor/mixins.scss/mixins';
+@import 'tools/vendor/flexboxgrid-sass/flexboxgrid';
+
+// Components.
+@import 'components/flexboxgrid-custom';
