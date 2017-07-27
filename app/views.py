@@ -9,7 +9,7 @@ from math import pi
 # Functional view for display the index page.
 @check_session
 def index():
-    return render_template('index.html', pi=pi)
+    return render_template('index.jinja', pi=pi)
 
 
 # Class view for sign-up at the site.
@@ -17,7 +17,7 @@ class SignUp(MethodView):
 
     @check_session
     def get(self):
-        return render_template('security/signup.html')
+        return render_template('security/signup.jinja')
 
     def post(self):
         data = request.form
@@ -35,7 +35,7 @@ class LogIn(MethodView):
 
     @check_session
     def get(self):
-        return render_template('security/login.html')
+        return render_template('security/login.jinja')
 
     def post(self):
         data = request.form
@@ -44,7 +44,7 @@ class LogIn(MethodView):
         user = db.session.query(User).filter_by(username=username).first()
 
         if user is None:
-            return render_template('security/login.html', error_user=True)
+            return render_template('security/login.jinja', error_user=True)
         else:
             session['username'] = username
             return redirect(url_for('user.profile', user=username))

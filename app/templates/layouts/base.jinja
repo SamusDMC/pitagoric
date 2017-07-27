@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="{{ url_for('static', filename=filename) }}"/>
 {% endmacro %}
 
+
 <!DOCTYPE html>
 <html>
   <head>
-    {% include 'layouts/head.html' %}
+    {% include 'layouts/head.jinja' %}
     {% block head %}{% endblock %}
     {% block head_styles %}{% endblock %}
     {% block head_scripts %}{% endblock %}

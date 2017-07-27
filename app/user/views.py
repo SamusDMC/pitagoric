@@ -4,7 +4,7 @@ from flask import render_template, url_for, redirect, session
 # Functional view for control the user.
 def user(user=None):
     if 'username' in session:
-        return render_template('profile.html', user=session['username'])
+        return render_template('profile.jinja', user=session['username'])
     else:
         return redirect(url_for('login'))
 

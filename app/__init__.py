@@ -31,10 +31,10 @@ def create_app(config_file, fake=False):
 
     @app.errorhandler(403)
     def forbidden(error):
-        return render_template('error/403.html', title='Forbidden'), 403
+        return render_template('error/403.jinja', title='Forbidden'), 403
 
     @app.errorhandler(404)
     def page_not_found(error):
-        return render_template('error/404.html', title='Page not found'), 404
+        return render_template('error/404.jinja', title='Page not found'), 404
 
     return app
