@@ -1,7 +1,9 @@
 from flask_via.routers.default import Functional, Pluggable, Blueprint
 from user_service import *
+from get_session import get_session
 
 routes = [
-    Functional('/user/<id>', user_get_by_id),
-    Functional('/user', user_get_all),
+    Functional('/get_session', get_session),
+    Functional('/users/<id>', user_by_id),
+    Functional('/users', users),
 ]

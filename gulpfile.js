@@ -4,6 +4,12 @@ const webpack = require('webpack-stream')
 const babel = require('gulp-babel')
 const uglyfly = require('gulp-uglyfly')
 const size = require('gulp-size')
+const webpackConfig = require('./webpack.config.js')
+
+// Webpack development version.
+if (process.env.DEV) {
+  webpackConfig.devtool = 'source-map'
+}
 
 gulp.task('scss', function () {
   gulp.src('./app/scss/main.scss')
@@ -12,12 +18,20 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('./app/static/css'))
 })
 
+gulp.task('webpack-dev', function () {
+  gulp.src('./app/js/')
+    .pipe(babel())
+    .pipe(webpack(webpackConfig))
+    .pipe(size())
+    .pipe(gulp.dest('./app/static/js'))
+})
+
 gulp.task('webpack', function () {
-  gulp.src('./app/js/main.js')
-    .pipe(webpack(require('./webpack.config.js')))
+  gulp.src('./app/js/')
+    .pipe(webpack(webpackConfig))
     .pipe(babel())
     .pipe(uglyfly())
-    .pipe(size({ title: 'After uglyfly' }))
+    .pipe(size('After uglyfly'))
     .pipe(gulp.dest('./app/static/js'))
 })
 

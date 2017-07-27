@@ -1,5 +1,9 @@
 {% extends 'layouts/base.html' %}
 
+{% block head_scripts %}
+  {{ set_script('login') }}
+{% endblock %}
+
 {% block content %}
   <div class="container">
     <form id="form-login" action="{{ url_for('login') }}" method="post">

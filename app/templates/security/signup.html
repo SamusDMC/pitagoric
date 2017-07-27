@@ -1,5 +1,9 @@
 {% extends 'layouts/base.html' %}
 
+{% block head_scripts %}
+  {{ set_script('signup') }}
+{% endblock %}
+
 {% block content %}
   <div class="container">
     <form id="form-signup" action="{{ url_for('signup') }}" method="post">

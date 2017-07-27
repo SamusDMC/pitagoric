@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rich-97/math-blog/issues"
   },
@@ -22,7 +22,6 @@
     "babel-preset-env": "^1.6.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-gzip": "^1.4.0",
     "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
     "gulp-uglyfly": "^1.4.2",
