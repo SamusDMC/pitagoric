@@ -1,6 +1,12 @@
 const CheckPasswords = require('check-passwords')
 const $ = require('jquery')
 
+const helpers = require('./helpers')
+
+$(window).load(function () {
+  helpers.checkLocalStorage()
+})
+
 $(function () {
   new CheckPasswords({
     onMatch: function () {

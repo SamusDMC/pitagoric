@@ -1,14 +1,22 @@
-const { View } = require('backbone')
+const { View, $ } = require('backbone')
 const UserSession = require('../models/UserSession')
+const helpers = require('../helpers')
 
 module.exports = View.extend({
   initialize () {
-    this.model = new UserSession()
+    this.model = helpers.session(UserSession)
 
-    this.model.fetch()
-    this.listenTo(this.model, 'change', this.render)
+    if (helpers.sessionExists()) {
+      this.render()
+    } else {
+      this.listenTo(this.model, 'change', this.render)
+    }
   },
   render () {
-    console.log(this.model.get('username'))
+    console.log(this.model.toJSON())
+
+    $('#logout').click(function () {
+      window.localStorage.removeItem('userSession')
+    })
   }
 })

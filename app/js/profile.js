@@ -5,7 +5,6 @@ const ProfileView = require('./views/ProfileView')
 
 const { $ } = Backbone
 
-// Routing with the pathname.
 $(function () {
   const profileView = new ProfileView()
 })
