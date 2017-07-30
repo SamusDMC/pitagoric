@@ -37,9 +37,14 @@ gulp.task('webpack', function () {
 
 gulp.task('default', ['scss', 'webpack'])
 
-gulp.task('watch', function () {
+gulp.task('watch-js', function () {
   gulp.watch([
-    './app/js/*.js',
+    './app/js/**/*.js'
+  ], ['webpack-dev'])
+})
+
+gulp.task('watch-scss', function () {
+  gulp.watch([
     './app/scss/*.scss'
-  ], ['default'])
+  ], ['scss'])
 })

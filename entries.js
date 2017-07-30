@@ -1,5 +1,5 @@
 // Entries for webpack.
-const src = './app/js'
+const src = './app/js/entries'
 
 module.exports = {
   index: `${src}/index.js`,

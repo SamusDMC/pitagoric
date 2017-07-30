@@ -1,11 +1,7 @@
 const CheckPasswords = require('check-passwords')
 const $ = require('jquery')
 
-const helpers = require('./helpers')
-
-$(window).load(function () {
-  helpers.checkLocalStorage()
-})
+const helpers = require('../helpers')
 
 $(function () {
   new CheckPasswords({

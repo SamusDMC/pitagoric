@@ -1,0 +1,130 @@
+{
+  "es": [
+    {
+      "author": "Galileo Galilei",
+      "date": "1564-1642",
+      "nationality": "Italiano",
+      "phrases": [
+        "Las matemáticas son el alfabeto con el cual Dios ha escrito el Universo.",
+        "Si comenzase de nuevo mis estudios, seguiría el consejo de Platón y comenzaría con las matemáticas."
+      ],
+      "dedications": [
+        "Físico",
+        "Astronomo"
+      ]
+    },
+    {
+      "author": "René Descartes",
+      "date": "1596-1650",
+      "nationality": "Francés",
+      "phrases": [
+        "La matemática es la ciencia del orden y la medida, de bellas cadenas de razonamientos, todos sencillos y fáciles.",
+        "Los números perfectos, como los hombres perfectos, son muy extraños."
+      ],
+      "dedications": [
+        "Filosofo",
+        "Matemático"
+      ]
+    },
+    {
+      "author": "Henry David Thoreau",
+      "date": "1817-1862",
+      "nationality": null,
+      "phrase": "Las matemáticas no mienten, lo que hay son muchos matemáticos mentirosos.",
+      "dedications": [
+        "Escritor",
+        "Poeta",
+        "Pensador"
+      ]
+    },
+    {
+      "author": "Albert Einstein",
+      "date": "1879-1955",
+      "nationality": "Alemán",
+      "phrases": [
+        "Cuando las leyes de la matemática se refieren a la realidad, no son ciertas; cuando son ciertas, no se refieren a la realidad.",
+        "No te preocupes por tus dificultades en matemáticas. Te puedo asegurar que las mías son aún mayores.",
+        "Las matemáticas puras son, en su forma, la poesía de las ideas lógicas.",
+        "No todo lo que cuenta puede ser contado. No todo lo que puede ser contado cuenta."
+      ],
+      "dedications": [
+        "Científico"
+      ]
+    },
+    {
+      "author": "Thomas Carlyle",
+      "date": "1795-1881",
+      "nationality": "Inglés",
+      "phrase": "Con números se puede demostrar cualquier cosa.",
+      "dedications": [
+        "Historiador",
+        "Pensador",
+        "Ensayista"
+      ]
+    },
+    {
+      "author": "Isaac Newton",
+      "date": "1643-1727",
+      "nationality": "Inglés",
+      "phrases": [
+        "La verdad se encuentra en la simplicidad y no en la multiplicidad y confusión de las cosas.",
+        "Lo que sabemos es una gota, lo que no sabemos es un océano.",
+        "Para cada acción siempre se opone una reacción igual.",
+        "Construimos demasiados muros y no suficientes puentes.",
+        "Un hombre puede imaginar cosas que son falsas, pero sólo puede entender cosas que son verdad.",
+        "La unidad es la variedad, y la variedad en la unidad es la ley suprema del universo.",
+        "Toda fuerza ejercida sobre un cuerpo es directamente proporcional a la aceleración que experimentara.",
+        "Platón es mi amigo, Aristóteles es mi amigo, pero mi mejor amigo es la verdad."
+      ],
+      "dedications": [
+        "Física",
+        "Matemática",
+        "Astronomía",
+        "Teología",
+        "Alquimia"
+      ]
+    },
+    {
+      "author": "Stephen Hawking",
+      "date": "1942",
+      "nationality": "Inglés",
+      "phrases": [
+        "Somos solo una raza avanzada de monos en un planeta menor de una estrella mediana. Pero podemos entender el Universo. Eso nos hace muy especiales.",
+        "La raza humana necesita un desafío intelectual. Debe ser aburrido ser Dios, y no tener nada que descubrir.",
+        "El universo no solo tiene una historia, sino cualquier historia posible.",
+        "Casi no he conocido matemáticos que razonen.",
+        "Creo que todo el mundo debería tener un panorama general de como opera el universo y nuestro lugar en el. Es un deseo básico humano. Y también pone nuestras preocupaciones en perspectiva.",
+        "Incluso si hubiera una sola teoría unificadora, solo es una serie de reglas y ecuaciones.",
+        "Uno no puede discutir con un teorema matemático.",
+        "Creo que el cerebro es esencialmente un ordenador y la consciencia es como un programa de ordenador. Parará de funcionar cuando el ordenador se apague. Teóricamente, podría ser recreada en una red neuronal, pero sería muy díficil, ya que requeriría toda la memoria de una persona.",
+        "No es bueno ponerse furioso si te quedas atascado. Lo que yo hago es seguir pensando sobre el problema pero trabajar en otra cosa. A veces se necesita años antes de que vea el camino. En el caso de la perdida de información y agujeros negros, fue 29 años.",
+        "La ciencia no solo es una disciplina de razón, sino también de romance y pasión."
+      ],
+      "dedications": [
+        "Matemática aplicada",
+        "Física teórica",
+        "Física cuántica"
+      ]
+    },
+    {
+      "author": "Shakuntala Devi",
+      "date": "1929-2013",
+      "nationality": "India",
+      "phrase": "Sin matemáticas, no hay nada que puedas hacer. Todo a tu alrededor es matemáticas. Todo a tu alrededor son números.",
+      "dedications": [
+        "Matemática",
+        "Astrología",
+        "Escritura"
+      ]
+    },
+    {
+      "author": "Paul Lockhart",
+      "date": null,
+      "nationality": "Estado unidense",
+      "phrase": "Las matemáticas son el arte de la explicación.",
+      "dedications": [
+        "Matetamática"
+      ]
+    }
+  ]
+}

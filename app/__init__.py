@@ -2,32 +2,36 @@
 
 from flask import Flask, render_template
 from flask_via import Via
-from models import db
 from flask_compress import Compress
+from flask_babel import Babel
+
 from fake_data import create_fake_data
+from models import db
 
 compress = Compress()
 via = Via()
+babel = Babel()
 
 
 def create_app(config_file, fake=False):
     app = Flask(__name__)
     app.config.from_pyfile(config_file)
-    app.secret_key = 'dEwq43FalLñpq12Nb!'
 
     # Initializes.
     via.init_app(app)
     db.init_app(app)
     compress.init_app(app)
+    babel.init_app(app)
 
     with app.app_context():
-        db.drop_all()
-        db.create_all()
-
         # Creator of fake data.
         if fake:
+            db.drop_all()
+            db.create_all()
             create_fake_data(db)
             db.session.commit()
+        else:
+            db.create_all()
 
     @app.errorhandler(403)
     def forbidden(error):

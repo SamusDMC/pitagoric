@@ -1,18 +1,7 @@
-{% macro set_script(script_name) %}
-  {% set filename = 'js/%s.bundle.js'|format(script_name) %}
-
-  <script type="text/javascript" src="{{ url_for('static', filename=filename) }}" charset="utf-8"></script>
-{% endmacro %}
-
-{% macro set_style(style_name) %}
-  {% set filename = 'css/%s.css'|format(style_name) %}
-
-  <link rel="stylesheet" href="{{ url_for('static', filename=filename) }}"/>
-{% endmacro %}
-
+{% from 'macros.jinja' import set_script, set_style %}
 
 <!DOCTYPE html>
-<html>
+<html lang="{{ locale }}">
   <head>
     {% include 'layouts/head.jinja' %}
     {% block head %}{% endblock %}

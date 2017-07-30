@@ -2,3 +2,4 @@ node_modules
 app/static
 app.db
 *.pyc
+app/scss/tools/vendor

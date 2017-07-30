@@ -1,5 +1,5 @@
-const Backbone = require('backbone')
+const { Model } = require('../backbone')
 
-module.exports = Backbone.Model.extend({
-  urlRoot: '/api/user'
+module.exports = Model.extend({
+  urlRoot: '/api/users'
 })

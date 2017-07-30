@@ -1,6 +1,6 @@
-# Math Blog
+# Pitagoric
 
-¿What is Math Blog?, well i will attempt build a site for learn much stuff of mathematics.
+¿What is **Pitagoric**?, well i will attempt build a site for learn much stuff of mathematics.
 
 This is under construction, if you have one idea please send me a message to morenoricardo237@gmail.com.
 
@@ -25,11 +25,15 @@ Javascript:
 -   jquery.
 -   prosemirror.
 -   checkpasswords.
+-   js-cookie.
 
 CSS:
 
 -   flexboxgrid.
 -   mixins.scss.
+-   family.scss.
+-   font-awesome.
+-   animate.css-scss.
 
 ### For the back-end
 
@@ -39,12 +43,14 @@ Python:
 -   flask-via.
 -   flask-compress.
 -   flask-sqlalchemy.
+-   Flask-Babel.
 
 ## List of models
 
 -   User.
 -   Post.
 -   Post category.
+-   Post Comments.
 
 ## TODO list
 

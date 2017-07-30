@@ -53,6 +53,16 @@ class Post(BaseModel):
         self.content = content
 
 
+class PostCategory(BaseModel):
+    name = Column(String(100), nullable=False)
+    description = Column(String(150), nullable=False)
+    posts = relationship(Post, backref='post_category', lazy='dynamic')
+
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
+
 class User(BaseModel):
     username = Column(String(100), unique=True)
     fullname = Column(String(100))
@@ -69,13 +79,3 @@ class User(BaseModel):
         self.password = password
         self.profile_image = profile_image
         self.bio = bio
-
-
-class PostCategory(BaseModel):
-    name = Column(String(100), nullable=False)
-    description = Column(String(150), nullable=False)
-    posts = relationship(Post, backref='post_category', lazy='dynamic')
-
-    def __init__(self, name, description):
-        self.name = name
-        self.description = description
