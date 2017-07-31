@@ -12,11 +12,11 @@ file_json.close()
 
 def phrases():
     if request.method == 'GET':
-        lang = request.args['lang']
+        lang = request.args.get('lang')
 
         if bool(lang):
             data = data_dict[lang]
 
             return Response(dumps(data), 200, {'Content-Type': 'application/json'})
 
-        return Response(data_json, 200, {'Content-Type': 'application/json'})
+    return Response(data_json, 200, {'Content-Type': 'application/json'})

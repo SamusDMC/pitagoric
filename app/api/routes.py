@@ -7,5 +7,5 @@ routes = [
     Functional('/users/<id>', user_by_id),
     Functional('/users', users),
     Functional('/user_session', user_session),
-    Functional('/phrases', phrases)
+    Functional('/phrases', phrases),
 ]
