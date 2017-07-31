@@ -1,5 +1,5 @@
 const { Model } = require('../backbone')
 
 module.exports = Model.extend({
-  urlRoot: '/api/user_session'
+  urlRoot: '/api/current_user'
 })

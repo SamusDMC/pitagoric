@@ -54,11 +54,12 @@ Python:
 
 ## TODO list
 
-* [ ] Create DER.
 * [ ] Create all models.
+* [ ] Create DER.
 * [ ] Test the models.
 * [ ] Create the API.
-  * [ ] User service.
+  * [x] User service.
+  * [x] Phrases service.
   * [ ] Post service.
 * [ ] Test the API.
 

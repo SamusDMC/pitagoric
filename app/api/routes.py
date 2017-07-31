@@ -5,7 +5,6 @@ from math_phrases import phrases
 
 routes = [
     Functional('/users/<id>', user_by_id),
-    Functional('/users', users),
-    Functional('/user_session', user_session),
+    Functional('/current_user', current_user),
     Functional('/phrases', phrases),
 ]

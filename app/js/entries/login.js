@@ -10,8 +10,8 @@ $(window).on('load', function () {
 
     // Request for authenticate the user with HTTP BASIC-AUTH.
     $.ajax({
-      method: $(this)[0].method.toUpperCase(),
-      url: $(this)[0].action,
+      method: event.target.method.toUpperCase(),
+      url: event.target.action,
       beforeSend: function (request) {
         request.setRequestHeader('Authorization', `Basic ${base64Credentials}`)
       },

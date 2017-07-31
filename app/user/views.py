@@ -1,15 +1,17 @@
 from flask import render_template, url_for, redirect, current_app
 
-
-# Functional view for control the user.
-def user(user):
-    return render_template('profile.jinja', user=user)
+from ..decorators import auth
+from ..helpers.token_helpers import remove_token_expired
 
 
-# Functional view for log-out.
+# Functional route for control the user.
+@auth.login_required
+def user_profile(user):
+    """Functinal route for rendering the user profile."""
+    return render_template('profile.jinja')
+
+
+# Functional route for log-out.
 def logout():
-    redirect_to_login = redirect(url_for('login'))
-    response = current_app.make_response(redirect_to_login)
-    response.set_cookie('token', '', expires=0)
-
-    return response
+    """Functional route for log-out the user"""
+    return remove_token_expired()

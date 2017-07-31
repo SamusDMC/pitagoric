@@ -31,8 +31,9 @@ Backbone.sync = (function (syncFunc) {
           // When exist and is expired.
           if (exist && expired) {
             Cookies.remove('token')
-            window.location = '/login'
           }
+
+          window.location = '/login'
         }
       }
     }
