@@ -23,7 +23,7 @@ def auth_required(func):
             token = request.cookies.get('token')
 
             try:
-                token_decoded = jwt.decode(token, 'dEwq43FalLñpq12Nb!', algorithms=['HS256'])
+                token_decoded = jwt.decode(token, 'dEwq43FalLñpq12Nb!XqKio#', algorithms=['HS256'])
             except jwt.ExpiredSignatureError:
                 token_errors_dict['expired'] = True
 
