@@ -6,7 +6,20 @@ from app.models import *
 faker = Factory.create()
 
 
-def create_fake_user():
+def fake_collection(fake_model, amount):
+    """
+    Function for create a fake collection.
+    """
+
+    fake_collection = []
+
+    for i in range(amount):
+        fake_collection.append(fake_model())
+
+    return fake_collection
+
+
+def fake_user():
     """
     Function for create a fake user.
     """
@@ -21,20 +34,7 @@ def create_fake_user():
     return User(fullname, username, email, password, profile_image, bio)
 
 
-def create_fake_users(amount):
-    """
-    Function for create fake users.
-    """
-
-    fake_users = []
-
-    for i in range(amount):
-        fake_users.append(create_fake_user())
-
-    return fake_users
-
-
-def create_fake_post():
+def fake_post():
     """
     Function for create a fake post.
     """
@@ -46,20 +46,7 @@ def create_fake_post():
     return Post(title, date, content)
 
 
-def create_fake_posts(amount):
-    """
-    Function for create fake posts.
-    """
-
-    fake_posts = []
-
-    for i in range(amount):
-        fake_posts.append(create_fake_post())
-
-    return fake_posts
-
-
-def create_fake_post_comment():
+def fake_post_comment():
     """
     Function for create a fake comment.
     """
@@ -70,20 +57,7 @@ def create_fake_post_comment():
     return PostComment(comment, date)
 
 
-def create_fake_posts_comments(amount):
-    """"
-    Function for create fake comments.
-    """
-
-    fake_comments = []
-
-    for i in range(amount):
-        fake_comments.append(create_fake_post_comment())
-
-    return fake_comments
-
-
-def create_fake_post_category():
+def fake_post_category():
     """
     Function for create a fake category.
     """
@@ -94,41 +68,28 @@ def create_fake_post_category():
     return PostCategory(name, description)
 
 
-def create_fake_posts_categories(amount):
-    """
-    Function for create fake categories.
-    """
-
-    fake_categories = []
-
-    for i in range(amount):
-        fake_categories.append(create_fake_post_category())
-
-    return fake_categories
-
-
 def create_fake_data(db):
     """
     Function for create fake data.
     """
 
     # Creation of fake users.
-    for fake_user in create_fake_users(10):
+    for fake_user_dict in fake_collection(fake_user, 10):
         # Creation of fake posts, post comments & post category.
-        fake_post_category = create_fake_post_category()
-        fake_posts = create_fake_posts(10)
+        fake_post_category_dict = fake_post_category()
+        fake_posts_dict = fake_collection(fake_post, 10)
 
         # Add comments to the posts.
-        for fake_post in fake_posts:
-            fake_post.comments = create_fake_posts_comments(5)
+        for fake_post_dict in fake_posts_dict:
+            fake_post_dict.comments = fake_collection(fake_post_comment, 5)
 
         # Add posts to the fake category.
-        fake_post_category.posts = fake_posts
+        fake_post_category_dict.posts = fake_posts_dict
         # add posts to the fake user.
-        fake_user.posts = fake_posts
+        fake_user_dict.posts = fake_posts_dict
 
-        db.session.add(fake_user)
-        db.session.add(fake_post_category)
+        db.session.add(fake_user_dict)
+        db.session.add(fake_post_category_dict)
 
     db.session.add(User(
         'Ricardo Moreno',
