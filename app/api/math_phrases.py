@@ -13,7 +13,10 @@ file_json.close()
 
 
 def phrases():
-    """Functional route for get fhrases of mathematics."""
+    """
+    Functional route for get fhrases of mathematics.
+    """
+
     if request.method == 'GET':
         lang = request.args.get('lang')
         headers = content_type('json')

@@ -49,7 +49,9 @@ def login_required_ajax(func):
 
 
 def login_required(func):
-    """Decorator for verify the access token"""
+    """
+    Decorator for verify the access token.
+    """
     @wraps(func)
     def new_function(*args, **kargs):
         if 'token' in request.cookies:

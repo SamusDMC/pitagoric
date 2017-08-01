@@ -7,7 +7,10 @@ hide_props_user = ['password']
 
 
 def user_by_id(id):
-    """Functional route for get a user by his id."""
+    """
+    Functional route for get a user by his id.
+    """
+
     if request.method == 'GET':
         user = db.session.query(User).filter_by(id=id).first()
 
@@ -16,6 +19,9 @@ def user_by_id(id):
 
 @auth.login_required_ajax
 def current_user(current_user):
-    """Functional route for the current user."""
+    """
+    Functional route for the current user.
+    """
+
     if request.method == 'GET':
         return jsonify(current_user.to_dict(hide_props_user))

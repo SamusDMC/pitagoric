@@ -6,6 +6,7 @@ Model, relationship = db.Model, db.relationship
 Column, ForeignKey = db.Column, db.ForeignKey
 Integer, String, Date, BLOB = db.Integer, db.String, db.Date, db.BLOB
 func, DateTime = db.func, db.DateTime
+Text = db.Text
 
 
 # The base model.
@@ -30,8 +31,8 @@ class BaseModel(Model):
 
 class PostComment(BaseModel):
     comment = Column(String(600), nullable=False)
-    date = Column(Date(), nullable=False)
-    user_id = Column(Integer, ForeignKey('user.id'), nullable=False)
+    date = Column(Date, nullable=False)
+    user_id = Column(Integer, ForeignKey('user.id'))
     post_id = Column(Integer, ForeignKey('post.id'), nullable=False)
 
     def __init__(self, comment, date):
@@ -41,8 +42,8 @@ class PostComment(BaseModel):
 
 class Post(BaseModel):
     title = Column(String(100), nullable=False)
-    date = Column(Date(), nullable=False)
-    content = Column(BLOB(1000), nullable=False)
+    date = Column(Date, nullable=False)
+    content = Column(Text, nullable=False)
     user_id = Column(Integer, ForeignKey('user.id'), nullable=False)
     post_category_id = Column(Integer, ForeignKey('post_category.id'), nullable=False)
     comments = relationship(PostComment, backref='post', lazy='dynamic')
@@ -54,7 +55,7 @@ class Post(BaseModel):
 
 
 class PostCategory(BaseModel):
-    name = Column(String(100), nullable=False)
+    name = Column(String(50), nullable=False)
     description = Column(String(150), nullable=False)
     posts = relationship(Post, backref='post_category', lazy='dynamic')
 
@@ -71,6 +72,7 @@ class User(BaseModel):
     profile_image = Column(BLOB(1000))
     bio = Column(String(350))
     posts = relationship(Post, backref='user', lazy='dynamic')
+    post_comments = relationship(PostComment, backref='user', lazy='dynamic')
 
     def __init__(self, fullname, username, email, password, profile_image, bio):
         self.fullname = fullname

@@ -7,14 +7,20 @@ from . import res_helpers
 
 
 def invalid_token_res(error):
-    """Response for invalid tokens"""
+    """
+    Response for invalid tokens.
+    """
+
     headers = res_helpers.content_type('json')
 
     return Response(error, 401, headers)
 
 
 def remove_token_expired():
-    """Function for remove the cookie with token expired"""
+    """
+    Function for remove the cookie with token expired.
+    """
+
     redirect_to_login = redirect(url_for('login'))
     response = current_app.make_response(redirect_to_login)
     response.set_cookie('token', '', expires=0)
@@ -23,7 +29,10 @@ def remove_token_expired():
 
 
 def decode_token(token):
-    """Function for decode token of authentication"""
+    """
+    Function for decode token of authentication.
+    """
+
     secret_key = 'dEwq43FalLñpq12Nb!XqKio#'
     algorithms = ['HS256']
 

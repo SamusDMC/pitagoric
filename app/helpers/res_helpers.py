@@ -6,7 +6,9 @@ mimetypes.add_type('.json', 'application/json')
 
 
 def content_type(ext):
-    """Function for get content-type header."""
+    """
+    Function for get content-type header.
+    """
 
     ext = '.' + ext
 
@@ -16,7 +18,10 @@ def content_type(ext):
 
 
 def access_denied_res(error):
-    """Response for access denied (UNAUTHORIZED - 401)"""
+    """
+    Response for access denied (UNAUTHORIZED - 401).
+    """
+
     headers = {
         'WWW-Authenticate': 'Basic realm="Login Required"',
         'Content-Type': mimetypes.types_map['.json'],

@@ -13,9 +13,16 @@ via = Via()
 babel = Babel()
 
 
-def create_app(config_file, fake=False):
+def create_app():
+    """
+    Factory app.
+    """
+
+    # Create the app.
     app = Flask(__name__)
-    app.config.from_pyfile(config_file)
+
+    # File configuration from a file.
+    app.config.from_pyfile('../config.py')
 
     # Initializes.
     via.init_app(app)
@@ -24,14 +31,7 @@ def create_app(config_file, fake=False):
     babel.init_app(app)
 
     with app.app_context():
-        # Creator of fake data.
-        if fake:
-            db.drop_all()
-            db.create_all()
-            create_fake_data(db)
-            db.session.commit()
-        else:
-            db.create_all()
+        db.create_all()
 
     @app.errorhandler(403)
     def forbidden(error):

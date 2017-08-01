@@ -16,7 +16,10 @@ locale = get_locale()
 
 
 def index():
-    """Functional view for render the index page"""
+    """
+    Functional view for render the index page.
+    """
+
     return render_template('index.jinja', locale=locale)
 
 
