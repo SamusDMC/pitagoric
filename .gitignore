@@ -3,3 +3,4 @@ app/static
 app.db
 *.pyc
 app/scss/tools/vendor
+tests/app.test.db
