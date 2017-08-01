@@ -56,11 +56,12 @@ Python:
 
 * [ ] Create all models.
 * [ ] Create DER.
-* [ ] Test the models.
+* [x] Test the models.
 * [ ] Create the API.
   * [x] User service.
   * [x] Phrases service.
-  * [ ] Post service.
+  * [x] Post service.
+  * [x] Post category service.
 * [ ] Test the API.
 
 ## Debug
@@ -70,3 +71,8 @@ For debug the project execute the file `debug.sh`, if you need run the server in
 ## Build the assets.
 
 For build the assets just run `gulp`.
+
+
+## Test
+
+You should have `nose2` installed to test this app. For test the app just run `nose2`.

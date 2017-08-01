@@ -1,7 +1,8 @@
-from flask import request, jsonify
+from flask import request, jsonify, Response
 
-from ..models import User, db
+from ..models import *
 from ..decorators import auth
+from ..helpers.res_helpers import not_found_res
 
 hide_props_user = ['password']
 
@@ -14,7 +15,10 @@ def user_by_id(id):
     if request.method == 'GET':
         user = db.session.query(User).filter_by(id=id).first()
 
-        return jsonify(user.to_dict(hide_props_user))
+        if user is None:
+            return not_found_res()
+        else:
+            return jsonify(user.to_dict(hide_props_user))
 
 
 @auth.login_required_ajax

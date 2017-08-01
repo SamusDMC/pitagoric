@@ -17,9 +17,8 @@ def create_fake_user():
     password = Provider.password()
     profile_image = faker.image_url()
     bio = ''.join(faker.text(max_nb_chars=350, ext_word_list=None))
-    fake_user = User(fullname, username, email, password, profile_image, bio)
 
-    return fake_user
+    return User(fullname, username, email, password, profile_image, bio)
 
 
 def create_fake_users(amount):
@@ -89,7 +88,7 @@ def create_fake_post_category():
     Function for create a fake category.
     """
 
-    name = faker.text(max_nb_chars=50, ext_word_list=None)
+    name = faker.word(ext_word_list=None)
     description = faker.text(max_nb_chars=150, ext_word_list=None)
 
     return PostCategory(name, description)

@@ -1,5 +1,5 @@
 import unittest
-from os import path
+from os import path, getenv
 
 from flask_testing import TestCase
 
@@ -25,7 +25,9 @@ class TestModels(TestCase):
 
     def tearDown(self):
         db.session.remove()
-        db.drop_all()
+
+        if getenv('FAKE') != 'persist':
+            db.drop_all()
 
     def testWithFakeData(self):
         create_fake_data(db)

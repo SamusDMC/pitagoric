@@ -28,3 +28,11 @@ def access_denied_res(error):
     }
 
     return Response(error, 401, headers)
+
+
+def not_found_res():
+    """
+    Response for not found (404).
+    """
+
+    return Response('Not found', 404)
