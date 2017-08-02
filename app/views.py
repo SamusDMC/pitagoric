@@ -12,22 +12,20 @@ import jwt
 from models import User, db
 from helpers.res_helpers import access_denied_res
 
-locale = get_locale()
-
 
 def index():
     """
     Functional view for render the index page.
     """
 
-    return render_template('index.jinja', locale=locale)
+    return render_template('index.jinja', locale=get_locale())
 
 
 # Class view for sign-up at the site.
 class SignUp(MethodView):
 
     def get(self):
-        return render_template('auth/signup.jinja', locale=locale)
+        return render_template('auth/signup.jinja', locale=get_locale())
 
     def post(self):
         data = request.form
@@ -48,7 +46,7 @@ class SignUp(MethodView):
 class LogIn(MethodView):
 
     def get(self):
-        return render_template('auth/login.jinja', locale=locale)
+        return render_template('auth/login.jinja', locale=get_locale())
 
     def post(self):
         login_errors_dict = {

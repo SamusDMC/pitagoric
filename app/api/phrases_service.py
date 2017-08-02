@@ -23,10 +23,11 @@ def phrases():
         headers = content_type('json')
 
         if lang is not None:
-            data = data_dict[lang][:int(limit) or len(data_dict[lang])]
+            if limit is not None:
+                data = data_dict[lang][:int(limit)]
+            else:
+                data = data_dict[lang]
 
             return Response(dumps(data), 200, headers)
-        else:
-            return not_found_res()
 
         return Response(data_json, 200, headers)
