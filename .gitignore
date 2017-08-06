@@ -1,6 +1,10 @@
 node_modules
-app/static
+app/static/js
+app/static/css
+app/static/images
 app.db
 *.pyc
-app/scss/tools/vendor
+app/assets/scss/tools/vendor
 tests/app.test.db
+app/static/fonts/fontawesome-*
+app/static/fonts/FontAwesome.*

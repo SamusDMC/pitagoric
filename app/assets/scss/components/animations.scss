@@ -1,0 +1,8 @@
+//////////
+// Fade in animations; 1 to 3 seconds.
+//////////
+@for $i from 1 through 5 {
+  .fadeIn-#{$i}s {
+    @include fadeIn(#{$i}s);
+  }
+}

@@ -1,0 +1,16 @@
+//////////
+// Styles for paragraph.
+//////////
+p {
+  font-family: $paragraph-font;
+}
+
+//////////
+// Styles for headers.
+//////////
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $title-font;
+    font-size: nth($h-sizes, $i);
+  }
+}

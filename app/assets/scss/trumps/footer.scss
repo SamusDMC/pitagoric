@@ -1,0 +1,10 @@
+footer {
+  @include bgc($gray);
+  padding: 30px 0;
+  text-align: center;
+
+  address {
+    color: lighten($black, 40);
+    font-family: $title-font;
+  }
+}

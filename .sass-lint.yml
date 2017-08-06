@@ -1,0 +1,9 @@
+files:
+  includes: app/assets/scss/**/*.scss'
+  ignore: 'app/assets/scss/tools/vendor/**/*.scss'
+
+rules:
+  indentation:
+    - 2
+    -
+      size: 2

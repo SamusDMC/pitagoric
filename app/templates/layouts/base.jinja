@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html lang="{{ locale }}">
   <head>
-    {% include 'layouts/head.jinja' %}
+    {% include 'partials/head.jinja' %}
     {% block head %}{% endblock %}
     {% block head_styles %}{% endblock %}
     {% block head_scripts %}{% endblock %}
   </head>
   <body>
     {% block content %}{% endblock %}
+    {% include 'partials/footer.jinja' %}
+    {% block footer %}{% endblock %}
   </body>
 </html>

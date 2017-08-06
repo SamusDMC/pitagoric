@@ -1,0 +1,64 @@
+main.index-main section {
+  // Section of phrases.
+  &:nth-of-type(1) {
+    background-image: url('../images/bg-index.png');
+    color: $white;
+    height: 100vh;
+    padding-top: 250px;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 120px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-align: center;
+
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+
+    h1,
+    p {
+      text-shadow: 1px 1px 1px $black;
+    }
+  }
+
+  // Section about & how-to-contribute.
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    padding: 50px 0;
+
+    h2 {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    p {
+      color: $color-p;
+      text-align: justify;
+    }
+
+    div[class^='col-'] {
+      padding: 20px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @include bgc($gray);
+
+    p {
+      color: lighten($black, 15);
+    }
+  }
+}

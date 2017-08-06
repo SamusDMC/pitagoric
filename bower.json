@@ -1,5 +1,5 @@
 {
-  "name": "math-blog",
+  "name": "pitagoric",
   "description": "What is Math Blog? well i will attempt build a site for learn much stuff of mathematics.",
   "main": "run.py",
   "authors": [
@@ -9,7 +9,7 @@
   "keywords": [
     "Math"
   ],
-  "homepage": "https://github.com/rich-97/math-blog",
+  "homepage": "https://github.com/rich-97/pitagoric",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -23,6 +23,7 @@
     "mixins.scss": "*",
     "animate.css-scss": "^3.1.0",
     "family.scss": "^1.0.8",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "reset.scss": "^1.0.1"
   }
 }
