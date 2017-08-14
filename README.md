@@ -72,7 +72,6 @@ For debug the project execute the file `debug.sh`, if you need run the server in
 
 For build the assets just run `gulp`.
 
-
 ## Test
 
 You should have `nose2` installed to test this app. For test the app just run `nose2`.

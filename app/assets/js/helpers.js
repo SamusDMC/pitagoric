@@ -11,6 +11,7 @@ module.exports = {
       model: header.model
     })
   },
+  // Function for set the header behavior.
   headerBehavior () {
     const bodyHeight = window.document.body.clientHeight
     const windowInnerHeight = window.innerHeight

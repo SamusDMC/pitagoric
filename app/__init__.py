@@ -5,7 +5,6 @@ from flask_via import Via
 from flask_compress import Compress
 from flask_babel import Babel
 
-from fake_data import create_fake_data
 from models import db
 
 compress = Compress()
