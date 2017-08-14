@@ -8,4 +8,11 @@ const { $ } = Backbone
 
 $(function () {
   const profileView = new ProfileView()
+
+  helpers.commonViews({
+    header: {
+      model: profileView.model
+    }
+  })
+  helpers.headerBehavior()
 })

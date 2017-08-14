@@ -1,8 +1,44 @@
 //////////
-// Fade in animations; 1 to 3 seconds.
+// Fade in animations; 1 to 5 seconds.
 //////////
 @for $i from 1 through 5 {
   .fadeIn-#{$i}s {
     @include fadeIn(#{$i}s);
+  }
+}
+
+//////////
+// Fade in down animations; 1 to 5 seconds.
+//////////
+@for $i from 1 through 5 {
+  .fadeInDown-#{$i}s {
+    @include fadeInDown(#{$i}s);
+  }
+}
+
+//////////
+// Fade in down big animations; 1 to 5 seconds.
+//////////
+@for $i from 1 through 5 {
+  .fadeInDownBig-#{$i}s {
+    @include fadeInDownBig(#{$i}s);
+  }
+}
+
+//////////
+// Fade out down animations; 1 to 5 seconds.
+//////////
+@for $i from 1 through 5 {
+  .fadeOutDown-#{$i}s {
+    @include fadeOutDown(#{$i}s);
+  }
+}
+
+//////////
+// Fade out down big animations; 1 to 5 seconds.
+//////////
+@for $i from 1 through 5 {
+  .fadeOutDownBig-#{$i}s {
+    @include fadeOutDownBig(#{$i}s);
   }
 }

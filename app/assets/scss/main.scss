@@ -5,6 +5,7 @@
 @import 'tools/vendor/family.scss/source/src/family';
 @import 'tools/vendor/font-awesome/scss/font-awesome';
 @import 'tools/vendor/reset.scss/reset.scss';
+@import 'tools/media-queries';
 
 // Settings.
 @import 'settings/variables';
@@ -21,3 +22,4 @@
 // Trumps.
 @import 'trumps/index-sections';
 @import 'trumps/footer';
+@import 'trumps/header';

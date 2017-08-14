@@ -33,7 +33,14 @@ Backbone.sync = (function (syncFunc) {
             Cookies.remove('token')
           }
 
-          window.location = '/login'
+          const page = window.location.pathname
+
+          // Set id null for change the model.
+          if (/^\/(login|signup)?$/.test(page)) {
+            model.set('id', null)
+          } else {
+            window.location = '/login'
+          }
         }
       }
     }

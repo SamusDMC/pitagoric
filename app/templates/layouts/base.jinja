@@ -9,7 +9,11 @@
     {% block head_scripts %}{% endblock %}
   </head>
   <body>
+    {% include 'partials/header.jinja' %}
+    {% block header %}{% endblock %}
+
     {% block content %}{% endblock %}
+
     {% include 'partials/footer.jinja' %}
     {% block footer %}{% endblock %}
   </body>

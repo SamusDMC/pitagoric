@@ -1,6 +1,10 @@
 main.index-main section {
   // Section of phrases.
   &:nth-of-type(1) {
+    @include media-max(767) {
+      padding-top: 125px;
+    }
+
     background-image: url('../images/bg-index.png');
     color: $white;
     height: 100vh;
@@ -12,6 +16,10 @@ main.index-main section {
     }
 
     p {
+      @include media-max(767) {
+        font-size: 1rem;
+      }
+
       font-size: 1.5rem;
       text-align: center;
 
@@ -45,7 +53,7 @@ main.index-main section {
     }
 
     p {
-      color: $color-p;
+      color: $text-color-1;
       text-align: justify;
     }
 

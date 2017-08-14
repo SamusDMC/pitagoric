@@ -6,10 +6,23 @@ p {
 }
 
 //////////
+// Styles for anchors.
+//////////
+
+a {
+  font-family: $anchor-font;
+  text-decoration: none;
+}
+
+//////////
 // Styles for headers.
 //////////
 @for $i from 1 through 6 {
   h#{$i} {
+    @include media-max(767) {
+      font-size: nth($h-sizes, $i) / 2;
+    }
+
     font-family: $title-font;
     font-size: nth($h-sizes, $i);
   }

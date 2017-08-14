@@ -3,34 +3,33 @@ const _ = require('underscore')
 const getRandomly = require('get-randomly')
 
 const Phrases = require('../collections/Phrases')
-const Phrase = require('../models/Phrase')
 
 module.exports = View.extend({
   initialize () {
-    const thisView = this;
-
+    this.template = _.template($('#phrase-tmp').html())
     this.collection = new Phrases()
 
     this.collection.fetch({
       data: {
         lang: $('html').attr('lang')
       },
-      success: function () {
-        thisView.render()
-      }
+      success: this.collectionSuccess.bind(this)
     })
+  },
+  collectionSuccess () {
+    this.render()
   },
   intervalPhrasesCb () {
     const randomPhrase = getRandomly(this.collection.toJSON())
-    const phraseTemplate = _.template($('#phrase-tmp').html())
 
-    if ($('#phrases-container').html() !== '') {
-      $('#phrases-container').empty()
+    if (this.$el.html() !== '') {
+      this.$el.empty()
     }
-    $('#phrases-container').append(phraseTemplate(randomPhrase))
+
+    this.$el.html(this.template(randomPhrase))
   },
   render () {
     this.intervalPhrasesCb()
-    this.intertalPhrases = setInterval(this.intervalPhrasesCb.bind(this), 10000)
+    this.intervalPhrases = setInterval(this.intervalPhrasesCb.bind(this), 10000)
   }
 })
