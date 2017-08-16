@@ -1,0 +1,8 @@
+Faker==0.7.18
+Flask==0.12.2
+Flask-Babel==0.11.2
+Flask-Compress==1.4.0
+Flask-SQLAlchemy==2.2
+Flask-Testing==0.6.2
+Flask-Via==2015.1.1
+PyJWT==1.5.2

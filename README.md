@@ -7,43 +7,8 @@ This is under construction, if you have one idea please send me a message to mor
 ## Installation
 
 1.  Clone the repo.
-2.  Install the dependencies for the front-end with `npm i & bower install`.
-3.  Install the dependencies for the back-end, please see the requeriments bellow.
-
-## Requeriments
-
--   npm & bower (as manager of modules).
--   webpack (as bundler).
--   gulpjs (as task automation).
-
-### For the front-end
-
-Javascript:
-
--   backbone.
--   underscore.
--   jquery.
--   prosemirror.
--   checkpasswords.
--   js-cookie.
-
-CSS:
-
--   flexboxgrid.
--   mixins.scss.
--   family.scss.
--   font-awesome.
--   animate.css-scss.
-
-### For the back-end
-
-Python:
-
--   flask.
--   flask-via.
--   flask-compress.
--   flask-sqlalchemy.
--   Flask-Babel.
+2.  Install the dependencies for the front-end with `npm install & bower install`.
+3.  Install the dependencies for the back-end with `sudo pip install -r requeriments.txt`.
 
 ## List of models
 
@@ -64,13 +29,19 @@ Python:
   * [x] Post category service.
 * [ ] Test the API.
 
-## Debug
-
-For debug the project execute the file `debug.sh`, if you need run the server in a specific port then execute with the port as parameter. With port: `./debug.sh 8081`.
-
-## Build the assets.
+## Build
 
 For build the assets just run `gulp`.
+
+### Tasks
+
+Execute the file `helpers.sh` for make a set of task (important).
+
+## Run & Debug
+
+Run the project in normal mode with `./run.py`. The default port is `8080`.
+
+For debug the project execute the file `debug.sh`, if you need run the server in a specific port then execute with the port as parameter. With port: `./debug.sh 8081`.
 
 ## Test
 
