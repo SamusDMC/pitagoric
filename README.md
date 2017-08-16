@@ -33,7 +33,7 @@ This is under construction, if you have one idea please send me a message to mor
 
 For build the assets just run `gulp`.
 
-### Tasks
+## Tasks
 
 Execute the file `helpers.sh` for make a set of task (important).
 
