@@ -92,9 +92,9 @@ def create_fake_data(db):
         db.session.add(fake_post_category_dict)
 
     db.session.add(User(
-        'Ricardo Moreno',
-        'rich',
-        'morenoricardo237@gmail.com',
+        'Foo Bar',
+        'foo',
+        'foobar@gmail.com',
         '1234',
         faker.image_url(),
         'Javascript & Python programmer.'

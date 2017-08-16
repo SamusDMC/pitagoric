@@ -60,7 +60,7 @@ class LogIn(MethodView):
         if user is not None:
             token_dict = {
                 'id': str(user.id),
-                'exp': datetime.utcnow() + timedelta(minutes=5),
+                'exp': datetime.utcnow() + timedelta(days=2),
             }
 
             if password == user.password:
