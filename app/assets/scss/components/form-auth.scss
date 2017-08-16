@@ -1,0 +1,56 @@
+.fields {
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 2px 2px 10px 2px black;
+
+  p,
+  form h2 {
+    color: #000;
+    padding: 10px 0;
+  }
+
+  form a {
+    color: #4178F1;
+  }
+
+  form textarea,
+  form input,
+  form button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid grey;
+  }
+
+  form textarea,
+  form input {
+    width: 60%;
+  }
+
+  form button {
+    width: 25%;
+    background: #fff;
+    cursor: pointer;
+    color: grey;
+    transition: color 1s ease;
+  }
+
+  form button:hover {
+    color: #000;
+  }
+
+}
+
+
+.login,
+.signup {
+  height: 100vh;
+
+	h1 {
+    margin-top: 100px;
+    color: $white;
+		font-size: 4rem;
+	}
+}
