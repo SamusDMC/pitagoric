@@ -5,14 +5,26 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-    <form id="form-login" action="{{ url_for('login') }}" method="post">
-      <h1>Aprende matemáticas como Pitagoras</h1>
-      <input type="text" name="username" placeholder="User name" autofocus> <br>
-      <input type="password" name="password" placeholder="Password"> <br>
-      <button type="submit">Log in</button>
-    </form>
+  <section class="login">
+    <div class="container">
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <h1>Aprende matemáticas como Pitagoras</h1>
+        </div>
 
-    <p>¿Aún no te has registrado?, <a href="/signup">registrate</a>.</p>
-  </div>
+        <div class="col-xs-6">
+          <div class="fields">
+            <form id="form-login" action="{{ url_for('login') }}" method="post">
+              <h2>Ingresar</h2>
+              <input type="text" name="username" placeholder="Nombre de usuario" autofocus> <br>
+              <input type="password" name="password" placeholder="Contraseña"> <br>
+              <button type="submit">Enviar</button>
+            </form>
+
+            <p>¿Aún no te has registrado?, <a href="/signup">registrate</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

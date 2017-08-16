@@ -8,3 +8,4 @@ app/assets/scss/tools/vendor
 tests/app.test.db
 app/static/fonts/fontawesome-*
 app/static/fonts/FontAwesome.*
+npm-debug.log
