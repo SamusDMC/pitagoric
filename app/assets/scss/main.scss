@@ -18,8 +18,11 @@
 // Components.
 @import 'components/flexboxgrid-custom';
 @import 'components/animations';
+@import 'components/form-auth';
 
 // Trumps.
 @import 'trumps/index-sections';
 @import 'trumps/footer';
 @import 'trumps/header';
+@import 'trumps/login';
+@import 'trumps/signup';
